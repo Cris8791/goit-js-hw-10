@@ -1,0 +1,42 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+}
+
+.breed-select {
+  padding: 10px;
+  border-radius: 10;
+  border-width: 5px;
+}
+
+.loader {
+  display: none;
+  font-weight: bold;
+}
+
+.error {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+
+.cat-info {
+  margin-top: 20px;
+  display: flexbox;
+}
+
+#cat-info-container {
+  display: flexbox; /* Folosește flexbox pentru a alinia elementele pe aceeași linie */
+  align-items: center; /* Aliniază vertical în centru */
+}
+
+#cat-image {
+  max-width: 100%;
+  height: auto;
+  margin-right: 10px; /* Adăugat margin pentru a separa imaginea de text */
+}
+
+#cat-description,
+#cat-temperament {
+  flex-grow: 1; /* Ocupă spațiul disponibil pe linie */
+}
