@@ -36,6 +36,17 @@ document.addEventListener('DOMContentLoaded', async function () {
         catDescription.textContent = `Description: ${cat.breeds[0].description}`;
         catTemperament.textContent = `Temperament: ${cat.breeds[0].temperament}`;
 
+        // Adăugăm stilurile direct pe elemente pentru aliniere
+        catInfo.style.display = 'flex';
+        catInfo.style.flexDirection = 'row';
+        catImage.style.maxWidth = '60%';
+        catImage.style.height = 'auto';
+        catImage.style.marginRight = '10px';
+        catText.style.display = 'flex';
+        catText.style.flexDirection = 'column';
+        catDescription.style.marginTop = '10px';
+        catTemperament.style.marginTop = '10px';
+
         // Hide loader and show cat info
         loader.style.display = 'none';
         catInfo.style.display = 'block';

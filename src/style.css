@@ -6,6 +6,11 @@ body {
   background-repeat: no-repeat;
 }
 
+.cat-class.cat-first {
+  box-sizing: border-box;
+  display: flexbox;
+  flex-direction: column;
+}
 .breed-select {
   padding: 10px;
   border-radius: 10;
@@ -23,15 +28,23 @@ body {
   font-weight: bold;
 }
 
-.cat-info.cat-info-more {
+.cat-class.cat-first .cat-info.cat-info-more {
   box-sizing: border-box;
   margin-top: 20px;
   display: flexbox;
+  flex-direction: column;
 }
 
 #cat-info-container {
   display: flexbox; /* Folosește flexbox pentru a alinia elementele pe aceeași linie */
   align-items: center; /* Aliniază vertical în centru */
+}
+
+.cat-info.cat-info-more .cat-text {
+  display: flexbox;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10px;
+  padding: 20px;
 }
 
 #cat-image {
