@@ -36,8 +36,8 @@ body {
 }
 
 #cat-info-container {
-  display: flexbox; /* Folosește flexbox pentru a alinia elementele pe aceeași linie */
-  align-items: center; /* Aliniază vertical în centru */
+  display: flexbox;
+  align-items: center;
 }
 
 .cat-info.cat-info-more .cat-text {
@@ -50,10 +50,10 @@ body {
 #cat-image {
   max-width: 100%;
   height: auto;
-  margin-right: 10px; /* Adăugat margin pentru a separa imaginea de text */
+  margin-right: 10px;
 }
 
 #cat-description,
 #cat-temperament {
-  flex-grow: 1; /* Ocupă spațiul disponibil pe linie */
+  flex-grow: 1;
 }

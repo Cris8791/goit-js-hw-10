@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', async function () {
   const catTemperament = document.getElementById('cat-temperament');
 
   try {
-    // Fetch and populate breeds
     const breeds = await fetchBreeds();
     breeds.forEach(breed => {
       const option = document.createElement('option');
@@ -23,20 +22,18 @@ document.addEventListener('DOMContentLoaded', async function () {
     breedSelect.addEventListener('change', async function () {
       const selectedBreedId = breedSelect.value;
 
-      // Show loader while fetching cat info
       loader.style.display = 'block';
       catInfo.style.display = 'none';
       error.style.display = 'none';
 
       try {
-        // Fetch and display cat info
         const cat = await fetchCatByBreed(selectedBreedId);
         catImage.src = cat.url;
         catName.textContent = `Breed: ${cat.breeds[0].name}`;
         catDescription.textContent = `Description: ${cat.breeds[0].description}`;
         catTemperament.textContent = `Temperament: ${cat.breeds[0].temperament}`;
 
-        // Adăugăm stilurile direct pe elemente pentru aliniere
+        // Adaugare stiluri descriere pisica direct pe elemente pentru aliniere
         catInfo.style.display = 'flex';
         catInfo.style.flexDirection = 'row';
         catImage.style.maxWidth = '60%';
@@ -47,17 +44,14 @@ document.addEventListener('DOMContentLoaded', async function () {
         catDescription.style.marginTop = '10px';
         catTemperament.style.marginTop = '10px';
 
-        // Hide loader and show cat info
         loader.style.display = 'none';
         catInfo.style.display = 'block';
       } catch (error) {
-        // Display error message
         loader.style.display = 'none';
         error.style.display = 'block';
       }
     });
   } catch (error) {
-    // Display error message
     loader.style.display = 'none';
     error.style.display = 'block';
   }
